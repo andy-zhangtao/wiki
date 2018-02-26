@@ -4,6 +4,7 @@
 
 ## 分类
 
+* [Script](https://andy-zhangtao.github.io/wiki/script)
 * Golang
 * CI/CD
 * Cloud
