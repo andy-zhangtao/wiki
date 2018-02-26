@@ -7,21 +7,21 @@
         
         
         
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <title>Andy`s Wiki</title>
-        <link href="/css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="/css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="/css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="/css/highlight.css">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Script - Andy`s Wiki</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
-        <script src="/js/jquery-1.10.2.min.js"></script>
-        <script src="/js/bootstrap-3.0.3.min.js"></script>
-        <script src="/js/highlight.pack.js"></script> 
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
     </head>
 
     <body>
@@ -38,7 +38,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Andy`s Wiki</a>
+            <a class="navbar-brand" href="..">Andy`s Wiki</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -46,10 +46,10 @@
                 <!-- Main navigation -->
                 <ul class="nav navbar-nav">
                     <li >
-                        <a href="/">Home</a>
+                        <a href="..">Home</a>
                     </li>
-                    <li >
-                        <a href="/script/">Script</a>
+                    <li class="active">
+                        <a href="./">Script</a>
                     </li>
                 </ul>
 
@@ -59,31 +59,59 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
+                    <li >
+                        <a rel="next" href="..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
             </ul>
         </div>
     </div>
 </div>
 
         <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#script">Script</a></li>
+            <li><a href="#golang">升级Golang依赖包</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
-    </div>
-
-
+<h1 id="script">Script</h1>
+<blockquote>
+<p>记录经常使用的脚本数据</p>
+</blockquote>
+<h2 id="golang">升级Golang依赖包</h2>
+<p>原始脚本在 <a href="https://gist.github.com/andy-zhangtao/e3fb38852bd381505e7d89cc9d2038f8">https://gist.github.com/andy-zhangtao/e3fb38852bd381505e7d89cc9d2038f8</a>
+<script src="https://gist.github.com/andy-zhangtao/e3fb38852bd381505e7d89cc9d2038f8.js"></script></p>
+<h3 id="_1">脚本执行过程</h3>
+<ol>
+<li>从Github clone指定工程(工程由参数传递，因此$1就是工程git路径。例如https://github.com/andy-zhangtao/DDog.git。当前仅支持Https方式，不支持ssh方式)</li>
+<li>然后会切换到指定分支(通过GITBRANCH判断,如果为空，则是master。 如果有值，则会切换到此分支。大小写及空格敏感)。</li>
+<li>在工程目录当中执行dep操作。 当前不支持进入二级目录执行dep操作</li>
+<li>dep执行之后，会读取Git操作所需要的数据(GITEMAIL,GITUSR和GITPASS)。如果数据均存在，则执行git push操作。</li>
+</ol>
+<h3 id="_2">注意点</h3>
+<ol>
+<li>所有操作都是在/tmp/dep目录中进行，因此注意/tmp剩余空间是否满足操作需要</li>
+<li>如果执行失败，当前不会返回更详尽的日志。 所以需要人工确认git分支，用户名，口令等信息是否正确。</li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">
             <hr>
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script>var base_url = '';</script>
-        <script src="/js/base.js"></script>
-        <script src="/search/require.js"></script>
-        <script src="/search/search.js"></script>
+        <script>var base_url = '..';</script>
+        <script src="../js/base.js"></script>
+        <script src="../search/require.js"></script>
+        <script src="../search/search.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
