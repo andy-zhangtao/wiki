@@ -2,6 +2,11 @@
 > 记录经常使用的脚本数据
 
 ## 升级Golang依赖包
+### 调用方式
+```
+sh <(curl -sS https://gist.githubusercontent.com/andy-zhangtao/e3fb38852bd381505e7d89cc9d2038f8/raw/c8dab825cd70bfaba4b34137668d1a77878045a5/mydep.sh) xxxxx.git
+```
+
 原始脚本在 [https://gist.github.com/andy-zhangtao/e3fb38852bd381505e7d89cc9d2038f8](https://gist.github.com/andy-zhangtao/e3fb38852bd381505e7d89cc9d2038f8)
 <script src="https://gist.github.com/andy-zhangtao/e3fb38852bd381505e7d89cc9d2038f8.js"></script>
 
