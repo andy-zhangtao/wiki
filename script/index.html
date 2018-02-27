@@ -79,6 +79,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#script">Script</a></li>
             <li><a href="#golang">升级Golang依赖包</a></li>
+            <li><a href="#docker">清除Docker垃圾镜像</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -101,7 +102,22 @@
 <ol>
 <li>所有操作都是在/tmp/dep目录中进行，因此注意/tmp剩余空间是否满足操作需要</li>
 <li>如果执行失败，当前不会返回更详尽的日志。 所以需要人工确认git分支，用户名，口令等信息是否正确。</li>
-</ol></div>
+</ol>
+<h2 id="docker">清除Docker垃圾镜像</h2>
+<blockquote>
+<p>删除所有当前不再使用的容器数据和镜像数据</p>
+</blockquote>
+<h3 id="_3">执行过程</h3>
+<ol>
+<li>关闭所有不在使用的容器</li>
+<li>删除所有不在使用的镜像</li>
+</ol>
+<h3 id="_4">调用方式</h3>
+<pre><code>sh &lt;(curl -sS https://gist.githubusercontent.com/andy-zhangtao/03d28b735f56262c4b7a4d9cd2dbf5e7/raw/1c5c761137e9d66c8649b58893d946467ce686e2/clean-docker.sh)
+</code></pre>
+
+<p>脚本位置在<a href="https://gist.github.com/andy-zhangtao/03d28b735f56262c4b7a4d9cd2dbf5e7">https://gist.github.com/andy-zhangtao/03d28b735f56262c4b7a4d9cd2dbf5e7</a>
+<script src="https://gist.github.com/andy-zhangtao/03d28b735f56262c4b7a4d9cd2dbf5e7.js"></script></p></div>
         </div>
 
         <footer class="col-md-12">
