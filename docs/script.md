@@ -15,3 +15,18 @@
 ### 注意点
 1. 所有操作都是在/tmp/dep目录中进行，因此注意/tmp剩余空间是否满足操作需要
 2. 如果执行失败，当前不会返回更详尽的日志。 所以需要人工确认git分支，用户名，口令等信息是否正确。
+
+## 清除Docker垃圾镜像
+> 删除所有当前不再使用的容器数据和镜像数据
+
+### 执行过程
+1. 关闭所有不在使用的容器
+2. 删除所有不在使用的镜像
+
+### 调用方式
+```
+sh <(curl -sS https://gist.githubusercontent.com/andy-zhangtao/03d28b735f56262c4b7a4d9cd2dbf5e7/raw/1c5c761137e9d66c8649b58893d946467ce686e2/clean-docker.sh)
+```
+
+脚本位置在[https://gist.github.com/andy-zhangtao/03d28b735f56262c4b7a4d9cd2dbf5e7](https://gist.github.com/andy-zhangtao/03d28b735f56262c4b7a4d9cd2dbf5e7)
+<script src="https://gist.github.com/andy-zhangtao/03d28b735f56262c4b7a4d9cd2dbf5e7.js"></script>
